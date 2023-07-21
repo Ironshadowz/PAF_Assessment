@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listing for <span data-th-text="${country}"></span></h1>
+    <a data-th-href="@{/}">Back</a>
+    <table>
+        <th>
+            <tr>
+                <td>Address</td>
+                <td>Price</td>
+                <td>Image</td>
+                <td></td>
+            </tr>
+        </th>
+        <tbody >
+            <tr data-th-each="unit:${listing}" data-th-object="${unit}">
+                <td data-th-text="*{address}"></td>
+                <td data-th-text="*{price}"></td>
+                <td><img data-th-src="*{image}" alt="No image avaliable"></td>
+                <td><input type="submit" value="Details"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

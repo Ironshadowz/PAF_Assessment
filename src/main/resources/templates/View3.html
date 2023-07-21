@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a data-th-href="@{/search}">Back</a>
+    </h1>
+    <table>
+        <tr>
+            <td>Id: </td>
+            <td data-th-text="${details.id}"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td data-th-text="${details.description}"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td data-th-text="${details.address}"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td data-th-text="${details.price}"></td>
+        </tr>
+        <tr>
+            <td>Amenitites</td>
+            <td data-th-text="${details.amenitites}"></td>
+        </tr>
+    </table>
+    <h1>Bookings</h1>
+    <form data-th-action="@{/book}" data-th-object="${form}" method="post">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" data-th-field="*{name}">
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" data-th-field="*{email}">
+        </div>
+        <div>
+            <label for="date">Arrival: </label>
+            <input type="date" data-th-field="*{date}">
+        </div>
+        <div>
+            <label for="days">Stay: </label>
+            <input type="text" data-th-field="*{days}">
+            <label> days</label>
+        </div>
+        <div>
+            <label></label>
+            <input type="submit" value="Book">
+        </div>
+    </form>
+</body>
+</html>
