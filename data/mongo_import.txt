@@ -1,0 +1,1 @@
+mongoimport -hlocalhost:27017 -d PAFBasic -c listings --legacy "C:\Users\Wei Liang\OneDrive\Desktop\VTTL Learning\PAF\vttp2023_batch3_paf_assessment\data\listings.json"
